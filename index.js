@@ -125,7 +125,9 @@ window.onload = function init() {
     }
   });
 
-  window.addEventListener('wheel', function (e) {});
+  window.addEventListener('wheel', function (e) {
+    scaleXYZ *= 1.0 + e.deltaY / 1000.0;
+  });
 
   render();
 };
